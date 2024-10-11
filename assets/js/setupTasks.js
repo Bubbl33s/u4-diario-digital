@@ -85,11 +85,12 @@ export const setupTasks = (user) => {
           </div>
 
           ${
-            user.email === data.userEmail &&
-            `<div>
+            user.email === data.userEmail
+              ? `<div>
             <button class="btn btn-info btn-editar" data-id="${doc.id}"><i class="bi bi-pencil-fill"></i> Editar</button>
             <button class="btn btn-danger btn-eliminar" data-id="${doc.id}"><i class="bi bi-trash3-fill"></i> Eliminar</button>
           </div>`
+              : `<div></div>`
           }
         </header>
         <hr />
